@@ -41,9 +41,12 @@ public class AudioPlayer : MonoBehaviour
     /// Initialize volume settings
     /// </summary>
     private void Start() {
-        SetMasterVolume(masterSlider);
-        SetMusicVolume(musicSlider);
-        SetSFXVolume(sfxSlider);
+        if(masterSlider != null)
+            SetMasterVolume(masterSlider);
+        if(musicSlider != null)
+            SetMusicVolume(musicSlider);
+        if(sfxSlider != null)
+            SetSFXVolume(sfxSlider);
     }
 
     public void SetMasterVolume(Slider volume) {
